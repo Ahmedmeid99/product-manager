@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Product Manager</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Product Manager</h1>
+            <p>create a new product by entering the data and clicking on the create button</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" placeholder="title" id="title">
+            <div class="price-container">
+                <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
+                <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                <small id="total">00</small>
+            </div>
+            <div class="info">
+                <input type="number" placeholder="count" id="count">
+                <input type="tetx" placeholder="category" id="category">
+            </div>
+            <button onclick="createProducts ()" type="submit" id="submit">create</button>
+        </div>
+
+        <div class="search-block">
+            <input onkeyup="searchItems(this.value)" type="text" id="search" placeholder="Search by title">
+            <div class="btnsearch">
+                <button onclick="focusInput()" id="searchTitle">search by Title & Category</button>
+                <!-- <button  id="searchCategory">search by Category</button> -->
+            </div>
+            <div id="delete-all">
+                <!-- button Delete All in js -->
+            </div>
+        </div>
+        <div class="table-wraper">
+            <div class="table-scroll">
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                    <tbody id="tbody">
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="./app.js"></script> -->
+    <script src="./js/myApp.js"></script>
+</body>
+
+</html>

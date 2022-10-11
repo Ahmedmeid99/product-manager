@@ -1,0 +1,263 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  background: #333333;
+}
+
+/*------------ scrollbar style------------*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161616;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #000;
+}
+
+/*------------ selection style------------*/
+::-moz-selection {
+  background-color: #444;
+  color: #111;
+}
+
+::selection {
+  background-color: #444;
+  color: #111;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.836);
+  margin: 20px auto;
+}
+
+.header h1 {
+  padding: 7px;
+}
+
+.header p {
+  font-size: 14px;
+  font-weight: 500;
+  word-spacing: 3px;
+}
+
+.inputs .price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inputs .price-container input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.inputs .price-container small {
+  height: 30px;
+  margin: 5px auto;
+  border-radius: 15px;
+  line-height: 30px;
+  background-color: #ffae00;
+  position: relative;
+  text-align: center;
+  padding-left: 25px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.inputs .price-container small::before {
+  content: "Total : ";
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  color: black;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.inputs .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inputs .info input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  margin: 5px auto;
+  border: none;
+  border-radius: 15px;
+  background-color: #0d0347;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ccc;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1c0a80;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 30px;
+  margin: 5px auto;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: #222;
+  color: #ccc;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:focus {
+  background-color: #111;
+}
+
+input:hover {
+  background-color: #111;
+}
+
+.btnsearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#search-title,
+#search-category {
+  width: 45%;
+  margin: 5px 0px;
+}
+
+.table-wraper {
+  position: relative;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  overflow: auto;
+  text-align: center;
+  margin: 10px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+table th {
+  text-transform: uppercase;
+}
+
+table td {
+  color: #ccc;
+}
+
+table th,
+table td {
+  padding: 5px;
+}
+
+#delete {
+  background: #660101;
+}
+
+#delete:hover {
+  background: #9b0202;
+}
+
+.delete-item {
+  background: #660101;
+  width: 80px;
+  height: 40px;
+}
+
+.delete-item:hover {
+  background: #9b0202;
+}
+
+.update-item {
+  width: 80px;
+  height: 40px;
+  background-color: #0d0347;
+}
+
+.update-item:hover {
+  background-color: #1c0a80;
+}
+
+@media (max-width: 600px) {
+  .price-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  small {
+    width: 100%;
+  }
+  .btnsearch {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #search-title,
+  #search-category {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
